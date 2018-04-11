@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" verbose="2" allow-return-values="true">
+	<test name="AT">
+		<classes>
+			<class name="com.automation.crm.web.exa.testCase">
+				<methods>
+					<include name="test_step1"/>
+					<include name="test_step2"/>
+					<include name="test_step3"/>  <!--affected by circumstances, may not run steps directly after the step2 finishes in a short time -->
+					<include name="test_step4"/>
+					<include name="test_step5"/>
+				</methods>
+			</class>
+		</classes>
+	</test>		
+</suite> <!-- Suite -->

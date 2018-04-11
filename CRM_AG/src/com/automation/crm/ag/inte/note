@@ -1,0 +1,10 @@
+        String GET_URL = "http://tst-crm.lenovo.com/sap(ZT1VMFpVWDA1QlgxTkJURVZUTWpRME1UVXdBRkJXZ1dlTUh0aU1zQ1ZqZU5wSzZnPT0=)/bc/bsp/sap/crm_ui_frame/BSPWDApplication.do";
+        HttpClient httpClient = new DefaultHttpClient();
+
+        HttpPost httpPost = new HttpPost(GET_URL);
+        HttpResponse response = httpClient.execute(httpPost);
+        Header[] head = response.getAllHeaders();
+        for(int i=0; i<=5; i++){
+            System.out.println(head[i]);
+        }
+        System.out.println(response.getStatusLine().getStatusCode());

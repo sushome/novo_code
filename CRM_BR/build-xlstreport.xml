@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="AT" default="generateReport" basedir=".">
+	<echo message="import libs" />
+	<path id="run.classpath">
+		<fileset dir="${basedir}">
+			<include name="lib/saxon-8.7.jar" />
+		</fileset>
+	</path>
+	<target name="generateReport">
+		<echo taskname="OutputReport" message="start output report" />
+		<xslt in="${basedir}/test-output-final/testng-results.xml" style="${basedir}/testng-results.xsl"
+			out="${basedir}/test-output-final/index-xslt.html ">
+			<param name="testNgXslt.outputDir" expression="${basedir}/test-output-final/" />
+			<param name="CusTestTitle" expression="${StrAndroidVersion}" />
+			<param name="CusTestVersion" expression="${StrTestVersion}" />
+			<classpath refid="run.classpath" />
+		</xslt>
+	</target>
+</project>

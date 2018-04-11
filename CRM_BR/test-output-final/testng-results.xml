@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="203237" started-at="2018-03-23T09:54:52Z" finished-at="2018-03-23T09:58:15Z">
+    <groups>
+    </groups>
+    <test name="AT" duration-ms="203237" started-at="2018-03-23T09:54:52Z" finished-at="2018-03-23T09:58:15Z">
+      <class name="com.automation.crm.web.exa.testCase">
+        <test-method status="PASS" signature="test_step1()[pri:0, instance:com.automation.crm.web.exa.testCase@71f2a7d5]" name="test_step1" duration-ms="25818" started-at="2018-03-23T17:54:52Z" description="test_step1" finished-at="2018-03-23T17:55:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_step1 -->
+        <test-method status="PASS" signature="test_step2()[pri:0, instance:com.automation.crm.web.exa.testCase@71f2a7d5]" name="test_step2" duration-ms="42790" started-at="2018-03-23T17:55:17Z" description="test_step2" depends-on-methods="com.automation.crm.web.exa.testCase.test_step1" finished-at="2018-03-23T17:56:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_step2 -->
+        <test-method status="PASS" signature="test_step3()[pri:0, instance:com.automation.crm.web.exa.testCase@71f2a7d5]" name="test_step3" duration-ms="41682" started-at="2018-03-23T17:56:00Z" description="test_step3" depends-on-methods="com.automation.crm.web.exa.testCase.test_step2" finished-at="2018-03-23T17:56:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_step3 -->
+        <test-method status="PASS" signature="test_step4()[pri:0, instance:com.automation.crm.web.exa.testCase@71f2a7d5]" name="test_step4" duration-ms="43515" started-at="2018-03-23T17:56:42Z" description="test_step4" depends-on-methods="com.automation.crm.web.exa.testCase.test_step3" finished-at="2018-03-23T17:57:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_step4 -->
+        <test-method status="PASS" signature="test_step5()[pri:0, instance:com.automation.crm.web.exa.testCase@71f2a7d5]" name="test_step5" duration-ms="49432" started-at="2018-03-23T17:57:25Z" description="test_step5" depends-on-methods="com.automation.crm.web.exa.testCase.test_step4" finished-at="2018-03-23T17:58:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_step5 -->
+      </class> <!-- com.automation.crm.web.exa.testCase -->
+    </test> <!-- AT -->
+  </suite> <!-- Suite -->
+</testng-results>

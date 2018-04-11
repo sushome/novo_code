@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="2" name="Failed suite [Suite]" allow-return-values="true">
+  <test name="AT(failed)">
+    <classes>
+      <class name="com.automation.crm.web.exa.testCase">
+        <methods>
+          <include name="test_step2"/>
+          <include name="test_step5"/>
+          <include name="test_step1"/>
+          <include name="test_step4"/>
+          <include name="test_step3"/>
+        </methods>
+      </class> <!-- com.automation.crm.web.exa.testCase -->
+    </classes>
+  </test> <!-- AT(failed) -->
+</suite> <!-- Failed suite [Suite] -->

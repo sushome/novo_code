@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AT" default="run" basedir=".">
+	<target name="run">
+		<ant antfile="build-testNG.xml" dir="." target="run" />
+		<ant antfile="build-xlstreport.xml" dir="." target="generateReport" />
+	</target>
+</project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AT" default="run" basedir=".">
+	<echo message="import libs" />
+	<path id="run.classpath">
+		<fileset dir="${basedir}">
+			<include name="lib/selenium-java-2.44.0.jar" />
+			<include name="lib/bsh-2.0b4.jar" />
+			<include name="lib/jcommander.jar" />
+			<include name="lib/snakeyaml.jar" />
+			<include name="lib/testng.jar" />
+			<include name="lib/guice-3.0.jar" />
+			<include name="lib/selenium-server-standalone-2.44.0.jar" />
+			<include name="lib/velocity-dep-1.4.jar" />
+			<include name="lib/reportng-1.1.4.jar" />
+			<include name="lib/poi-3.13-20150929.jar" />
+			<include name="lib/poi-ooxml-3.13-20150929.jar" />
+			<include name="lib/poi-ooxml-schemas-3.13-20150929.jar" />
+			<include name="lib/xmlbeans-2.6.0.jar" />
+			<include name="lib/saxon-8.7.jar" />
+			<include name="lib/java-client-3.4.1.jar" />
+			<include name="lib/selenium-html-runner-3.4.0.jar" />
+			<include name="lib/ews-java-api-2.0.jar" />
+			<include name="lib/ews/commons-codec-1.9.jar" />
+			<include name="lib/ews/commons-lang3-3.4.jar" />
+			<include name="lib/ews/commons-logging-1.2.jar" />
+			<include name="lib/ews/httpclient-4.4.1.jar" />
+			<include name="lib/ews/httpcore-4.4.1.jar" />
+			<include name="lib/ews/joda-time-2.8.jar" />
+			<include name="lib/ews/junit-3.8.1.jar" />
+		</fileset>
+	</path>
+	<taskdef name="testng" classname="org.testng.TestNGAntTask"
+		classpathref="run.classpath" />
+	<target name="clean">
+	</target>
+	<target name="compile" depends="clean">
+		<echo message="mkdir" />
+		<mkdir dir="build/classes" />
+		<javac srcdir="src" destdir="build/classes" debug="on" includeantruntime="false" encoding="UTF-8">
+			<classpath refid="run.classpath" />
+		</javac>
+	</target>
+	<path id="runpath">
+		<path refid="run.classpath" />
+		<pathelement location="build/classes" />
+	</path>
+	<target name="run" depends="compile">
+		<testng classpathref="runpath" outputDir="test-output-final"
+			haltOnfailure="false" useDefaultListeners="true"
+			delegatecommandsystemproperties="true">
+			<xmlfileset dir="${basedir}" includes="testng.xml" />
+			<sysproperty key="org.uncommons.reportng.title" value="Report of Automation test for CRM_BR" />
+			<jvmarg value="-ea" />
+		</testng>
+	</target>
+</project>

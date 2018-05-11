@@ -6,16 +6,16 @@ public class parameter{
 
     public String[] url(){
         String[] url = new String[10];
-        url[0] = "http://tst-crm.lenovo.com/sap/crm_logon/default.htm";
+        url[0] = "http:// crm_login";
         return url;
     }
 
     public String[] namePsw(){
         String[] np = new String[5];
-        np[0] = "FETEST-21";
-        np[1] = "1qaz2wsx";
-        np[2] = "SFT_BR_PRICE";
-        np[3] = "SFT_BR_ORDER";
+        np[0] = "username";
+        np[1] = "password";
+        np[2] = "role1";
+        np[3] = "role2";
         return np;
     }
 
